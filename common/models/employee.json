@@ -1,0 +1,52 @@
+{
+  "name": "Employee",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "isManager": {
+      "type": "boolean",
+      "required": true
+    },
+    "hadir": {
+      "type": "number",
+      "required": false
+    },
+    "izin": {
+      "type": "number",
+      "required": false
+    },
+    "cuti": {
+      "type": "number",
+      "required": false
+    },
+    "sakit": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "attendances": {
+      "type": "hasMany",
+      "model": "Attendance",
+      "foreignKey": "employeeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

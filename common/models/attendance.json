@@ -1,0 +1,37 @@
+{
+  "name": "Attendance",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "oke"
+    },
+    "reason": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "employee": {
+      "type": "belongsTo",
+      "model": "Employee",
+      "foreignKey": "employeeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

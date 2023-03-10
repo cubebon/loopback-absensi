@@ -1,0 +1,12 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "url": "mongodb://0.0.0.0:27017/",
+    "database": "absensi",
+    "name": "mongodb",
+    "connector": "mongodb"
+  }
+}
